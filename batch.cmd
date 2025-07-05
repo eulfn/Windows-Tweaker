@@ -1,5 +1,6 @@
 @echo off
 :: PC Tweaker - Windows 10/11 Optimization Script (Enhanced)
+:: Modular, safe, non-interactive, with logging and restore support
 
 :: =========================
 :: 0. UAC AUTO-ELEVATION & ENVIRONMENT
@@ -300,7 +301,7 @@ DISM /Online /Cleanup-Image /RestoreHealth >> "%LOG%" 2>&1
 :Summary
 echo.
 echo =========================
-echo  Tweaker Optimization Complete!
+echo  PC Tweaker Optimization Complete!
 echo =========================
 echo.
 echo [*] All optimizations applied.
