@@ -1,25 +1,5 @@
 @echo off
-:: =============================================================
-::  PC Tweaker by eulfen
-::  https://github.com/eulfen | @eulfen
-::  Copyright (c) 2024 eulfen. All rights reserved.
-::  Credit required for redistribution or modification.
-:: =============================================================
-
-::  Enhanced Windows 10/11 Optimization Script
-::  Author: eulfen | https://github.com/eulfen | @eulfen
-:: =============================================================
-
-:: AUTHORSHIP SPLASH (DO NOT REMOVE)
-echo.
-echo  =============================================================
-echo  =================== TWEAKED BY EULFEN =======================
-echo  =============================================================
-echo.
-echo                 Respect the author. Improve responsibly.
-echo.
-:: Centered splash (console width 70-80 chars)
-timeout /t 3 >nul
+:: PC Tweaker - Windows 10/11 Optimization Script (Enhanced)
 
 :: =========================
 :: 0. UAC AUTO-ELEVATION & ENVIRONMENT
@@ -59,11 +39,6 @@ if /i "%~1"=="/restore" (
     pause
     exit /b 0
 )
-
-:: =========================
-:: AUTHORSHIP WATERMARK (DO NOT REMOVE)
-:: =========================
-reg add "HKCU\Software\eulfenTweaker" /v Signature /t REG_SZ /d "Optimized by eulfen - PC Tweaker v1" /f >nul 2>&1
 
 :: =========================
 :: 1. DEBLOAT APPS & SERVICES
@@ -325,23 +300,13 @@ DISM /Online /Cleanup-Image /RestoreHealth >> "%LOG%" 2>&1
 :Summary
 echo.
 echo =========================
-echo  PC Tweaker Optimization Complete!
+echo  Tweaker Optimization Complete!
 echo =========================
 echo.
 echo [*] All optimizations applied.
 echo [*] Backups saved to: %BACKUP_DIR%
 echo [*] Log file: %LOG%
 echo [*] No critical system features (Store, Defender, Updates) were removed.
-echo.
-:: =========================
-:: FINAL AUTHORSHIP CREDIT (DO NOT REMOVE)
-:: =========================
-echo  -------------------------------------------------------------
-echo  ||             Optimized by: eulfen                        ||
-echo  ||        https://github.com/eulfen  |  @eulfen            ||
-echo  -------------------------------------------------------------
-echo.
-echo  Respect the author. Share responsibly.                      
 echo.
 
 echo [%date% %time%] Script completed >> "%LOG%"
